@@ -1,18 +1,18 @@
 {"version": 1,
  "config": {
-    "frame" : "",
-    "arm" : "",
+    "frame" : "Blackout/MiniH",
+    "arm" : "Blackout/MiniH-6in",
     "fc" : "",
-    "osd" : "",
-    "receiver" : "",
-    "flightcam" : "",
-    "hqcam" : "",
-    "esc" : "",
-    "motor" : "",
-    "videotx" : "",
-    "blackbox" : "",
-    "voltagereg" : "",
-    "prop" : [],
-    "battery" : []
+    "osd" : "ReadyToFlyQuads/",
+    "receiver" : "FrSky/",
+    "flightcam" : "600tvl",
+    "hqcam" : "GoPro/3Silver+",
+    "esc" : "RCTimer/",
+    "motor" : "Cobra/2204-1960kv",
+    "videotx" : "ImmersionRC/600",
+    "blackbox" : "SparkFun/OpenLog",
+    "voltagereg" : "Pololu/",
+    "prop" : "HQProp/Nylon5040",
+    "battery" : ["","",""]
   }
 }
