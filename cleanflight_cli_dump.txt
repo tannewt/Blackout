@@ -1,5 +1,6 @@
+
 # version
-Cleanflight/NAZE 1.8.1 Apr 2 2015 / 17:06:11 (988ae2d)
+Cleanflight/NAZE 1.8.1 Apr  2 2015 / 17:06:11 (988ae2d)
 # dump master
 
 # mixer
@@ -147,8 +148,8 @@ set serialrx_provider = 0
 set spektrum_sat_bind = 0
 set telemetry_switch = 0
 set telemetry_inversion = 0
-set frsky_default_lattitude = 0.000
-set frsky_default_longitude = 0.000
+set frsky_default_lattitude =  0.000
+set frsky_default_longitude =  0.000
 set frsky_coordinates_format = 0
 set frsky_unit = 0
 set frsky_vfas_precision = 0
@@ -285,14 +286,14 @@ set gimbal_flags = 1
 set acc_lpf_factor = 4
 set accxy_deadband = 40
 set accz_deadband = 40
-set accz_lpf_cutoff = 5.000
+set accz_lpf_cutoff =  5.000
 set acc_unarmedcal = 1
 set acc_trim_pitch = 0
 set acc_trim_roll = 0
 set baro_tab_size = 21
-set baro_noise_lpf = 0.600
-set baro_cf_vel = 0.985
-set baro_cf_alt = 0.965
+set baro_noise_lpf =  0.600
+set baro_cf_vel =  0.985
+set baro_cf_alt =  0.965
 set mag_declination = 0
 set pid_controller = 2
 set p_pitch = 40
@@ -304,17 +305,17 @@ set d_roll = 23
 set p_yaw = 85
 set i_yaw = 45
 set d_yaw = 0
-set p_pitchf = 2.500
-set i_pitchf = 0.400
-set d_pitchf = 0.020
-set p_rollf = 2.500
-set i_rollf = 0.400
-set d_rollf = 0.020
-set p_yawf = 7.000
-set i_yawf = 0.600
-set d_yawf = 0.000
-set level_horizon = 3.000
-set level_angle = 5.000
+set p_pitchf =  2.500
+set i_pitchf =  0.400
+set d_pitchf =  0.020
+set p_rollf =  2.500
+set i_rollf =  0.400
+set d_rollf =  0.020
+set p_yawf =  7.000
+set i_yawf =  0.600
+set d_yawf =  0.000
+set level_horizon =  3.000
+set level_angle =  5.000
 set sensitivity_horizon = 75
 set p_alt = 50
 set i_alt = 0
