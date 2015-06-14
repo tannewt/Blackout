@@ -1,6 +1,6 @@
 
 # version
-Cleanflight/NAZE 1.8.1 Apr  2 2015 / 17:06:11 (988ae2d)
+# Cleanflight/NAZE 1.9.0 May 31 2015 / 13:17:47 (98f7549)
 # dump master
 
 # mixer
@@ -30,7 +30,6 @@ feature -ONESHOT125
 feature -BLACKBOX
 feature RX_PPM
 feature VBAT
-feature MOTOR_STOP
 feature SOFTSERIAL
 feature FAILSAFE
 feature TELEMETRY
@@ -40,6 +39,13 @@ feature BLACKBOX
 
 # map
 map AETR1234
+
+
+# serial
+serial 0 5 115200 57600 0 115200
+serial 1 128 115200 57600 0 250000
+serial 30 1 19200 57600 0 115200
+serial 31 0 115200 57600 0 115200
 
 
 # led
@@ -102,8 +108,9 @@ set min_check = 1100
 set max_check = 1900
 set rssi_channel = 0
 set rssi_scale = 30
+set rssi_ppm_invert = 0
 set input_filtering_mode = 0
-set min_throttle = 1030
+set min_throttle = 1040
 set max_throttle = 1850
 set min_command = 1000
 set servo_center_pulse = 1500
@@ -119,26 +126,6 @@ set auto_disarm_delay = 5
 set small_angle = 25
 set flaps_speed = 0
 set fixedwing_althold_dir = 1
-set serial_port_1_functions = 5
-set serial_port_1_msp_baudrate = 5
-set serial_port_1_telemetry_baudrate = 0
-set serial_port_1_blackbox_baudrate = 5
-set serial_port_1_gps_baudrate = 4
-set serial_port_2_functions = 128
-set serial_port_2_msp_baudrate = 5
-set serial_port_2_telemetry_baudrate = 0
-set serial_port_2_blackbox_baudrate = 7
-set serial_port_2_gps_baudrate = 4
-set serial_port_3_functions = 1
-set serial_port_3_msp_baudrate = 2
-set serial_port_3_telemetry_baudrate = 0
-set serial_port_3_blackbox_baudrate = 5
-set serial_port_3_gps_baudrate = 4
-set serial_port_4_functions = 0
-set serial_port_4_msp_baudrate = 5
-set serial_port_4_telemetry_baudrate = 0
-set serial_port_4_blackbox_baudrate = 5
-set serial_port_4_gps_baudrate = 4
 set reboot_character = 82
 set gps_provider = 0
 set gps_sbas_mode = 0
@@ -153,6 +140,7 @@ set frsky_default_longitude =  0.000
 set frsky_coordinates_format = 0
 set frsky_unit = 0
 set frsky_vfas_precision = 0
+set hott_alarm_sound_interval = 5
 set battery_capacity = 0
 set vbat_scale = 110
 set vbat_max_cell_voltage = 43
@@ -175,6 +163,16 @@ set gyro_cmpf_factor = 600
 set gyro_cmpfm_factor = 250
 set yaw_control_direction = 1
 set pid_at_min_throttle = 1
+set yaw_direction = 1
+set yaw_jump_prevention_limit = 200
+set tri_unarmed_servo = 1
+set servo_lowpass_freq = 400
+set servo_lowpass_enable = 0
+set failsafe_delay = 10
+set failsafe_off_delay = 200
+set failsafe_throttle = 1000
+set rx_min_usec = 985
+set rx_max_usec = 2115
 set acc_hardware = 0
 set mag_hardware = 0
 set blackbox_rate_num = 1
@@ -184,7 +182,7 @@ set blackbox_device = 0
 # dump profile
 
 # profile
-profile 0
+profile 1
 
 # aux
 aux 0 12 0 1300 2100
@@ -207,26 +205,6 @@ aux 16 0 0 900 900
 aux 17 0 0 900 900
 aux 18 0 0 900 900
 aux 19 0 0 900 900
-aux 20 0 0 900 900
-aux 21 0 0 900 900
-aux 22 0 0 900 900
-aux 23 0 0 900 900
-aux 24 0 0 900 900
-aux 25 0 0 900 900
-aux 26 0 0 900 900
-aux 27 0 0 900 900
-aux 28 0 0 900 900
-aux 29 0 0 900 900
-aux 30 0 0 900 900
-aux 31 0 0 900 900
-aux 32 0 0 900 900
-aux 33 0 0 900 900
-aux 34 0 0 900 900
-aux 35 0 0 900 900
-aux 36 0 0 900 900
-aux 37 0 0 900 900
-aux 38 0 0 900 900
-aux 39 0 0 900 900
 
 # adjrange
 adjrange 0 0 0 900 900 0 0
@@ -251,6 +229,8 @@ servo 4 1020 2000 1500 100 -1
 servo 5 1020 2000 1500 100 -1
 servo 6 1020 2000 1500 100 -1
 servo 7 1020 2000 1500 100 -1
+servo 8 1020 2000 1500 100 -1
+servo 9 1020 2000 1500 100 -1
 
 set gps_pos_p = 15
 set gps_pos_i = 0
@@ -272,16 +252,7 @@ set deadband = 0
 set yaw_deadband = 0
 set throttle_correction_value = 0
 set throttle_correction_angle = 800
-set yaw_direction = 1
-set tri_unarmed_servo = 1
-set servo_lowpass_freq = 400
-set servo_lowpass_enable = 0
-set default_rate_profile = 0
-set failsafe_delay = 10
-set failsafe_off_delay = 200
-set failsafe_throttle = 1000
-set failsafe_min_usec = 985
-set failsafe_max_usec = 2115
+set default_rate_profile = 1
 set gimbal_flags = 1
 set acc_lpf_factor = 4
 set accxy_deadband = 40
@@ -295,7 +266,7 @@ set baro_noise_lpf =  0.600
 set baro_cf_vel =  0.985
 set baro_cf_alt =  0.965
 set mag_declination = 0
-set pid_controller = 2
+set pid_controller = 1
 set p_pitch = 40
 set i_pitch = 30
 set d_pitch = 23
@@ -306,14 +277,14 @@ set p_yaw = 85
 set i_yaw = 45
 set d_yaw = 0
 set p_pitchf =  2.500
-set i_pitchf =  0.400
-set d_pitchf =  0.020
+set i_pitchf =  0.600
+set d_pitchf =  0.060
 set p_rollf =  2.500
-set i_rollf =  0.400
-set d_rollf =  0.020
-set p_yawf =  7.000
-set i_yawf =  0.600
-set d_yawf =  0.000
+set i_rollf =  0.600
+set d_rollf =  0.060
+set p_yawf =  8.000
+set i_yawf =  0.500
+set d_yawf =  0.050
 set level_horizon =  3.000
 set level_angle =  5.000
 set sensitivity_horizon = 75
@@ -326,18 +297,20 @@ set d_level = 100
 set p_vel = 120
 set i_vel = 45
 set d_vel = 1
+set yaw_p_limit = 500
 
 # dump rates
 
 # rateprofile
-rateprofile 0
+rateprofile 1
 
 set rc_rate = 90
 set rc_expo = 65
+set rc_yaw_expo = 0
 set thr_mid = 50
 set thr_expo = 0
 set roll_rate = 0
 set pitch_rate = 0
 set yaw_rate = 0
-set tpa_rate = 20
+set tpa_rate = 0
 set tpa_breakpoint = 1500
