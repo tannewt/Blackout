@@ -1,18 +1,18 @@
 {"version": 1,
  "config": {
-    "frame" : "BlackOut/Super-Mini-H-Quad",
-    "arm" : "BlackOut/Mini-H-Quad-6\"-3mm",
+    "frame" : "Blackout/Super-Mini-H-Quad",
+    "arm" : "Blackout/Mini-H-Quad-6\"-3mm",
     "fc" : "AbuseMark/Full-Naze32",
-    "osd" : "ReadyToFlyQuads/",
+    "osd" : "ReadyToFlyQuads/MinimOSD",
     "receiver" : "FrSky/D4R-II",
-    "flightcam" : "600tvl",
-    "hqcam" : "GoPro/3Silver+",
-    "esc" : "RCTimer/",
+    "flightcam" : "RunCam/PZ0420H",
+    "hqcam" : "GoPro/HERO3+-Silver-Edition",
+    "esc" : "RCTimer/Mini-ESC20A",
     "motor" : "Cobra/CM-2204-1960kv",
     "videotx" : "ImmersionRC/5.8GHz-600mw",
     "blackbox" : "SparkFun/OpenLog",
     "voltagereg" : "Pololu/D24V6F5",
-    "prop" : "HQProp/Nylon5040",
+    "prop" : "HQProp/6x4.5-FG-DD",
     "battery" : ["Lumenier/1800mAh-4s-75c-Lipo"]
   }
 }
