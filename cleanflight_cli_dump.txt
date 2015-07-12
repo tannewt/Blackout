@@ -1,6 +1,6 @@
 
 # version
-# Cleanflight/NAZE 1.9.0 May 31 2015 / 13:17:47 (98f7549)
+# Cleanflight/SPRACINGF3 1.9.0 Jul 10 2015 / 06:04:26 (1c01daf)
 # dump master
 
 # mixer
@@ -33,6 +33,7 @@ feature VBAT
 feature SOFTSERIAL
 feature FAILSAFE
 feature TELEMETRY
+feature RSSI_ADC
 feature ONESHOT125
 feature BLACKBOX
 
@@ -42,10 +43,11 @@ map AETR1234
 
 
 # serial
-serial 0 5 115200 57600 0 115200
+serial 0 5 115200 57600 0 250000
 serial 1 128 115200 57600 0 250000
-serial 30 1 19200 57600 0 115200
-serial 31 0 115200 57600 0 115200
+serial 2 0 115200 57600 0 115200
+serial 30 0 115200 57600 0 115200
+serial 31 1 19200 57600 0 115200
 
 
 # led
@@ -101,7 +103,7 @@ color 13 330,0,255
 color 14 0,0,0
 color 15 0,0,0
 
-set looptime = 1200
+set looptime = 800
 set emf_avoidance = 0
 set mid_rc = 1500
 set min_check = 1100
@@ -110,7 +112,7 @@ set rssi_channel = 0
 set rssi_scale = 30
 set rssi_ppm_invert = 0
 set input_filtering_mode = 0
-set min_throttle = 1040
+set min_throttle = 1150
 set max_throttle = 1850
 set min_command = 1000
 set servo_center_pulse = 1500
@@ -155,9 +157,9 @@ set align_acc = 0
 set align_mag = 0
 set align_board_roll = 0
 set align_board_pitch = 0
-set align_board_yaw = -90
+set align_board_yaw = 90
 set max_angle_inclination = 500
-set gyro_lpf = 42
+set gyro_lpf = 256
 set moron_threshold = 32
 set gyro_cmpf_factor = 600
 set gyro_cmpfm_factor = 250
@@ -177,7 +179,7 @@ set acc_hardware = 0
 set mag_hardware = 0
 set blackbox_rate_num = 1
 set blackbox_rate_denom = 1
-set blackbox_device = 0
+set blackbox_device = 1
 
 # dump profile
 
@@ -185,7 +187,7 @@ set blackbox_device = 0
 profile 1
 
 # aux
-aux 0 12 0 1300 2100
+aux 0 0 0 900 900
 aux 1 0 0 900 900
 aux 2 0 0 900 900
 aux 3 0 0 900 900
@@ -221,16 +223,14 @@ adjrange 10 0 0 900 900 0 0
 adjrange 11 0 0 900 900 0 0
 
 # servo
-servo 0 1020 2000 1500 30 -1
-servo 1 1020 2000 1500 30 -1
-servo 2 1020 2000 1500 100 -1
-servo 3 1020 2000 1500 100 -1
-servo 4 1020 2000 1500 100 -1
-servo 5 1020 2000 1500 100 -1
-servo 6 1020 2000 1500 100 -1
-servo 7 1020 2000 1500 100 -1
-servo 8 1020 2000 1500 100 -1
-servo 9 1020 2000 1500 100 -1
+servo 0 1000 2000 1500 90 90 30 -1
+servo 1 1000 2000 1500 90 90 30 -1
+servo 2 1000 2000 1500 90 90 100 -1
+servo 3 1000 2000 1500 90 90 100 -1
+servo 4 1000 2000 1500 90 90 100 -1
+servo 5 1000 2000 1500 90 90 100 -1
+servo 6 1000 2000 1500 90 90 100 -1
+servo 7 1000 2000 1500 90 90 100 -1
 
 set gps_pos_p = 15
 set gps_pos_i = 0
@@ -298,6 +298,9 @@ set p_vel = 120
 set i_vel = 45
 set d_vel = 1
 set yaw_p_limit = 500
+set gyro_cut_hz = 90
+set pterm_cut_hz = 50
+set dterm_cut_hz = 17
 
 # dump rates
 

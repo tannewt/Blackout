@@ -2,7 +2,7 @@
  "config": {
     "frame" : "Blackout/Super-Mini-H-Quad",
     "arm" : "Blackout/Mini-H-Quad-6\"-3mm",
-    "fc" : "AbuseMark/Full-Naze32",
+    "fc" : "Seriously-Pro/SP-Racing-F3-Flight-Controller-(Deluxe)",
     "osd" : "ReadyToFlyQuads/MinimOSD",
     "receiver" : "FrSky/D4R-II",
     "flightcam" : "RunCam/PZ0420H",
