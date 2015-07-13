@@ -136,12 +136,12 @@ set gps_auto_baud = 0
 set serialrx_provider = 0
 set spektrum_sat_bind = 0
 set telemetry_switch = 0
-set telemetry_inversion = 0
+set telemetry_inversion = 1
 set frsky_default_lattitude =  0.000
 set frsky_default_longitude =  0.000
 set frsky_coordinates_format = 0
 set frsky_unit = 0
-set frsky_vfas_precision = 0
+set frsky_vfas_precision = 1
 set hott_alarm_sound_interval = 5
 set battery_capacity = 0
 set vbat_scale = 110
@@ -187,8 +187,8 @@ set blackbox_device = 1
 profile 1
 
 # aux
-aux 0 0 0 900 900
-aux 1 0 0 900 900
+aux 0 12 0 1300 2100
+aux 1 22 0 925 2100
 aux 2 0 0 900 900
 aux 3 0 0 900 900
 aux 4 0 0 900 900
@@ -312,8 +312,8 @@ set rc_expo = 65
 set rc_yaw_expo = 0
 set thr_mid = 50
 set thr_expo = 0
-set roll_rate = 0
-set pitch_rate = 0
-set yaw_rate = 0
+set roll_rate = 25
+set pitch_rate = 25
+set yaw_rate = 25
 set tpa_rate = 0
 set tpa_breakpoint = 1500
